@@ -1,0 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Tim
+  Date: 30/05/2022
+  Time: 10:53
+  To change this template use File | Settings | File Templates.
+--%>
+<a href="servlet?action=getIndex">Home</a>
+<a href="servlet?action=getOverview">Overview</a>
+<a href="servlet?action=getFormulier">Add game</a>
