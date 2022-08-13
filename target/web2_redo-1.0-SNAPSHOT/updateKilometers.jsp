@@ -7,12 +7,14 @@
 </head>
 <body>
 
-<div id="container">
-    <main>
+
+    <header>
         <h2>Pas de afgelegde kilometers aan</h2>
 
         <%@  include file="navigation.jspf" %>
+    </header>
 
+    <main>
         <c:if test="${not empty errors}">
             <p>The following errors occured while trying to commit changes.</p>
             <ul>
@@ -31,7 +33,6 @@
         </form>
     </main>
 
-</div>
 
 </body>
 </html>

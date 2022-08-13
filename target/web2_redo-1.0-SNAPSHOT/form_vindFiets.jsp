@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
 
+    <header>
         <h2>Toon de fiest met merk</h2>
 
         <%@  include file="navigation.jspf" %>
+    </header>
 
+    <main>
         <c:if test="${not empty errors}">
             <p>Er waren volgende problemen waardoor we de fiets niet konden vinden</p>
             <ul>

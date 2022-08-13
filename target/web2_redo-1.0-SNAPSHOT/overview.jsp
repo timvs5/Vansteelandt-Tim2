@@ -21,46 +21,48 @@
         <%@  include file="navigation.jspf" %>
     </header>
 
-    <p>De game met dde hoogste score is: ${highestScoreGame}</p>
+    <main>
+        <p>De game met dde hoogste score is: ${highestScoreGame}</p>
 
-    <table>
-        <form action="servlet" method="get" novalidate>
-            <input type="text" name="getGameScore" required>
-            <input type="submit" id="search" value="search">
-            <input type="hidden" name="action" value="getGameScore">
-        </form>
-        <thead>
-            <tr>
-                <th>Naam</th>
-                <th>Genre</th>
-                <th>Score</th>
-                <th>Change</th>
-                <th>Remove</th>
-            </tr>
-        </thead>
-        <tbody>
-            <c:forEach var="game" items="${games}">
-            <tr>
-                <td>${game.name}</td>
-                <td>${game.genre}</td>
-                <td>${game.score}</td>
-                <td>
-                    <form action="servlet" method="get" novalidate>
-                        <input type="submit" class="changeButton" value="change" >
-                        <input type="hidden" name="gameID" value=${game.id}>
-                        <input type="hidden" name="action" value="changeGame">
-                    </form>
-                </td>
-                <td>
-                    <form action="servlet" method="get" novalidate>
-                        <input type="submit" class="removeButton" value="Remove" >
-                        <input type="hidden" name="gameID" value=${game.id}>
-                        <input type="hidden" name="action" value="removeGame">
-                    </form>
-                </td>
-            </tr>
-            </c:forEach>
-        </tbody>
-    </table>
+        <table>
+            <form action="servlet" method="get" novalidate>
+                <input type="text" name="getGameScore" required>
+                <input type="submit" id="search" value="search">
+                <input type="hidden" name="action" value="getGameScore">
+            </form>
+            <thead>
+                <tr>
+                    <th>Naam</th>
+                    <th>Genre</th>
+                    <th>Score</th>
+                    <th>Change</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach var="game" items="${games}">
+                <tr>
+                    <td>${game.name}</td>
+                    <td>${game.genre}</td>
+                    <td>${game.score}</td>
+                    <td>
+                        <form action="servlet" method="get" novalidate>
+                            <input type="submit" class="changeButton" value="change" >
+                            <input type="hidden" name="gameID" value=${game.id}>
+                            <input type="hidden" name="action" value="changeGame">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="servlet" method="get" novalidate>
+                            <input type="submit" class="removeButton" value="Remove" >
+                            <input type="hidden" name="gameID" value=${game.id}>
+                            <input type="hidden" name="action" value="removeGame">
+                        </form>
+                    </td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

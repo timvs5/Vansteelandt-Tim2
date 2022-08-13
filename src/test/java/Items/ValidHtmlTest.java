@@ -31,7 +31,7 @@ public class ValidHtmlTest {
         WebElement invulveld = driver.findElement(By.id("doc"));
 
         // verander naar de url die je wil valideren
-        invulveld.sendKeys("https://r0882857.webontwerp.ucll.be/website/");
+        invulveld.sendKeys("https://github.com/timvs5/Vansteelandt-Tim2");
 
         WebElement button = driver.findElement(By.id("submit"));
         button.click();

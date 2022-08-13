@@ -13,11 +13,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
     <%@  include file="navigation.jspf" %>
-    <p>The cookie has been reset.</p>
-    <form action="servlet" method="get" novalidate>
-        <input type="submit" id="returnToFormulier" value="return">
-        <input type="hidden" name="action" value="getFormulier">
-    </form>
+    </header>
+
+    <main>
+        <p>The cookie has been reset.</p>
+        <form action="servlet" method="get" novalidate>
+            <input type="submit" id="returnToFormulier" value="return">
+            <input type="hidden" name="action" value="getFormulier">
+        </form>
+    </main>
 </body>
 </html>

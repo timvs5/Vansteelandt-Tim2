@@ -13,27 +13,29 @@
         <%@  include file="navigation.jspf" %>
     </header>
 
-    <c:if test="${not empty errors}">
-        <p>The following errors occured while trying to commit changes.</p>
-        <ul>
-            <c:forEach items="${errors}" var="error">
-                <li>${error}</li>
-            </c:forEach>
-        </ul>
-    </c:if>
-    <form class="formulier" action="servlet" method="post" novalidate>
-        <label for="gameName">Naam</label>
-        <input type="text" id="gameName" name="gameName">
-        <br>
-        <label for="gameGenre">genre</label>
-        <input type="text" id="gameGenre" name="gameGenre">
-        <br>
-        <label for="gameScore">score</label>
-        <input type="text" id="gameScore" name="gameScore">
-        <br>
-        <input type="hidden" name="action" value="addGame">
-        <input type="submit" id="gameSubmit" value="add">
-    </form>
+    <main>
+        <c:if test="${not empty errors}">
+            <p>The following errors occured while trying to commit changes.</p>
+            <ul>
+                <c:forEach items="${errors}" var="error">
+                    <li>${error}</li>
+                </c:forEach>
+            </ul>
+        </c:if>
+        <form class="formulier" action="servlet" method="post" novalidate>
+            <label for="gameName">Naam</label>
+            <input type="text" id="gameName" name="gameName">
+            <br>
+            <label for="gameGenre">genre</label>
+            <input type="text" id="gameGenre" name="gameGenre">
+            <br>
+            <label for="gameScore">score</label>
+            <input type="text" id="gameScore" name="gameScore">
+            <br>
+            <input type="hidden" name="action" value="addGame">
+            <input type="submit" id="gameSubmit" value="add">
+        </form>
+    </main>
 
     <footer>
         <p>U vulde het formulier al

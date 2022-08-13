@@ -13,12 +13,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <%@  include file="navigation.jspf" %>
+    <header>
+        <%@  include file="navigation.jspf" %>
+    </header>
 
-    <h2>Score: </h2>
-    <p>${result}</p>
+    <main>
+        <h2>Score: </h2>
+        <p>${result}</p>
 
-    <a class="back" href="servlet?action=getOverview">terug naar Overview</a>
+        <a class="back" href="servlet?action=getOverview">terug naar Overview</a>
+    </main>
 
 </body>
 </html>

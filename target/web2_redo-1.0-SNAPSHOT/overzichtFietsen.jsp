@@ -12,11 +12,13 @@
 <body>
 <div id="container">
 
-    <main>
+    <header>
         <h1>Bekijk alle fietsen</h1>
 
         <%@  include file="navigation.jspf" %>
+    </header>
 
+    <main>
         <form action="servlet" method="get" novalidate>
             <input type="text" name="fietsMerk" value="zoek op merk">
             <input type="submit" id="search" value="zoek">

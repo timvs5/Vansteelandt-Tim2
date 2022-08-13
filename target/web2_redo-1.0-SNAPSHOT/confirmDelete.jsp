@@ -13,15 +13,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>are you sure you want to remove "${Game.name}" from the database?</p>
-    <form action="servlet" method="post" novalidate>
-        <input type="submit" id="confirm" value="remove game">
-        <input type="hidden" name="gameID" value=${Game.id}>
-        <input type="hidden" name="action" value="confirmRemoveGame">
-    </form>
-    <form action="servlet" method="get" novalidate>
-        <input type="submit" id="cancel" value="cancel">
-        <input type="hidden" name="action" value="cancelRemoveGame">
-    </form>
+    <header>
+        <p>are you sure you want to remove "${Game.name}" from the database?</p>
+    </header>
+
+    <main>
+        <form action="servlet" method="post" novalidate>
+            <input type="submit" id="confirm" value="remove game">
+            <input type="hidden" name="gameID" value=${Game.id}>
+            <input type="hidden" name="action" value="confirmRemoveGame">
+        </form>
+        <form action="servlet" method="get" novalidate>
+            <input type="submit" id="cancel" value="cancel">
+            <input type="hidden" name="action" value="cancelRemoveGame">
+        </form>
+    </main>
 </body>
 </html>

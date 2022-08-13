@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <main>
+    <header>
         <h1>Verwijder fiets uit mijn collectie</h1>
 
         <%@  include file="navigation.jspf" %>
+    </header>
+
+
+    <main>
 
         <p>Wil je de fiets met naam ${fiets.naam} en merk ${fiets.merk} uit de lijst verwijderen?</p>
 
